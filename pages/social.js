@@ -16,6 +16,7 @@ import { PrismaClient } from '@prisma/client';
 
 const Social = ({ socialItem }) => {
 
+    /*
     const spotify = {
         name: "Spotify",
         url: "https://open.spotify.com/artist/7uXCDw5tJqpxQmqTK4pB1S?si=5I8E58TCTW24ci0F1LbHDw",
@@ -26,6 +27,7 @@ const Social = ({ socialItem }) => {
         link: "https://www.youtube.com/channel/UC9IvWSGBmu7xG1KpnHgaY3g",
         img: "https://www.interstellarrift.com/wiki/images/d/d8/Youtube-logo-png-photo-0.png"
     }
+    */
     //const links = [spotify, yt];
 
     return (
