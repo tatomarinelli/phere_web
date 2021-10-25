@@ -26,7 +26,7 @@ const Social = ({ socialItem }) => {
         link: "https://www.youtube.com/channel/UC9IvWSGBmu7xG1KpnHgaY3g",
         img: "https://www.interstellarrift.com/wiki/images/d/d8/Youtube-logo-png-photo-0.png"
     }
-    const links = [spotify, yt];
+    //const links = [spotify, yt];
 
     return (
         <Container>
@@ -48,7 +48,7 @@ const Social = ({ socialItem }) => {
                 alignItems='stretch'
             >
                 {socialItem.map((item) => (
-                    <Link isExternal href={item.url} color="White">
+                    <Link isExternal href={item.url} key={item.id} color="White">
                         <HStack>
                             <Image boxSize="50px" objectFit="cover" src={item.img} />
 
