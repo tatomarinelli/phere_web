@@ -1,5 +1,4 @@
 import { Container, Box, Heading, Image } from '@chakra-ui/react'
-
 const Page = () => {
     return (
 
@@ -27,7 +26,6 @@ const Page = () => {
                         src="/images/profile.jpg"
                         alt="Profile Pic" />
                 </Box>
-
 
             </Box>
         </Container>
