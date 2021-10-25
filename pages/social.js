@@ -1,22 +1,14 @@
 import {
     Container,
     Heading,
-    SimpleGrid,
-    Box,
     HStack,
     VStack,
     Text,
     Spacer,
-    Grid,
-    GridItem,
     Link,
     StackDivider,
-    IconButton,
-    Flex,
-    Icon,
     Image
 } from '@chakra-ui/react'
-import link from 'next/link';
 import { PrismaClient } from '@prisma/client';
 
 
