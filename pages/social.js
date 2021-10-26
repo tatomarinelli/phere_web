@@ -80,10 +80,11 @@ const Social = ({ socialItem, instagramItem }) => {
 export default Social
 
 
-export const getServerSideProps = async () => {
+export async function getServerSideProps() {
     const prisma = new PrismaClient();
-    
-    const instagramItem = await prisma.instagramItem.findMany();
-    const socialItem = await prisma.socialItem.findMany();
+    const [socialItem, instagramItem] = await Promise.all([
+        prisma.socialItem.findMany(),
+        prisma.instagramItem.findMany()
+    ]);
     return { props: { socialItem, instagramItem } };
-};
+  }
