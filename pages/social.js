@@ -82,6 +82,7 @@ export default Social
 
 export const getServerSideProps = async () => {
     const prisma = new PrismaClient();
+    
     const instagramItem = await prisma.instagramItem.findMany();
     const socialItem = await prisma.socialItem.findMany();
     return { props: { socialItem, instagramItem } };
