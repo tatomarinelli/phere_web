@@ -9,7 +9,6 @@ import {
     Link,
     StackDivider,
     Image,
-    Badge,
     SimpleGrid,
     GridItem,
     Box
