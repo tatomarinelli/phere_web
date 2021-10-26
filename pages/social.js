@@ -1,4 +1,5 @@
 import {
+    Divider,
     Container,
     Heading,
     HStack,
@@ -7,62 +8,73 @@ import {
     Spacer,
     Link,
     StackDivider,
-    Image
+    Image,
+    Badge,
+    SimpleGrid,
+    GridItem,
+    Box
 } from '@chakra-ui/react'
 import { PrismaClient } from '@prisma/client';
 
+import Section from '../components/section'
 
-//import Section from '../components/section'
-
-const Social = ({ socialItem }) => {
-
-    /*
-    const spotify = {
-        name: "Spotify",
-        url: "https://open.spotify.com/artist/7uXCDw5tJqpxQmqTK4pB1S?si=5I8E58TCTW24ci0F1LbHDw",
-        img: "https://1000logos.net/wp-content/uploads/2017/08/Spotify-Logo.png"
-    }
-    const yt = {
-        name: "Youtube",
-        link: "https://www.youtube.com/channel/UC9IvWSGBmu7xG1KpnHgaY3g",
-        img: "https://www.interstellarrift.com/wiki/images/d/d8/Youtube-logo-png-photo-0.png"
-    }
-    */
-    //const links = [spotify, yt];
-
+const Social = ({ socialItem, instagramItem }) => {
     return (
-        <Container>
-            <Heading as="h3" fontSize={20} mb={4} >
-                Social - Links
-            </Heading>
+        <Container maxW="container.xl">
+            <Section delay={0.1}>
+                <Heading as="h3" fontSize={20} mb={4} >
+                    Social - Links
+                </Heading>
+            </Section>
 
 
-            {/*Links*/}
-            <VStack
-                divider={<StackDivider />}
-                bg="whiteAlpha.200"
-                borderColor='gray.100'
-                borderWidth='2px'
-                p='4'
-                borderRadius='lg'
-                w='100%'
-                maxW={{ base: '90vw', sm: '80vw', lg: '50vw', xl: '40vw' }}
-                alignItems='stretch'
-            >
-                {socialItem.map((item) => (
+            <Section delay={0.2}>
+                <VStack
+                    divider={<StackDivider />}
+                    bg="whiteAlpha.200"
+                    borderColor='gray.500'
+                    borderWidth='2px'
+                    borderRadius='lg'
+                    w='100%'
+                    alignItems='stretch'
+                    paddingBlockStart={2}
+                    paddingBlockEnd={2}
+                >
+                    {socialItem.map((item) => (
+                        <Link isExternal href={item.url} key={item.id} color="White">
+                            <HStack paddingLeft={4} >
+                                <Image boxSize={8} src={item.img} alignContent="center" />
+                                <Text> {item.name}</Text>
+                                <Spacer />
+                            </HStack>
+                        </Link>
+                    ))}
+                </VStack>
+            </Section>
+
+            <Section delay={0.3}>
+                <Divider my={6} />
+                <Box textAlign="end">
+                    <Heading as="h3" fontSize={20} mb={4}>
+                        Instagram Posts
+                    </Heading>
+                </Box>
+                <Divider my={6} />
+            </Section>
+
+            <Section delay={0.35}>
+            <SimpleGrid columns={3} spacing={5} width="full">
+                {instagramItem.map((item) => (
                     <Link isExternal href={item.url} key={item.id} color="White">
-                        <HStack>
-                            <Image boxSize="50px" objectFit="cover" src={item.img} />
-
-                            <Text>{item.name}</Text>
-                            <Spacer />
-
-                        </HStack>
+                        <GridItem maxW="xl" borderWidth="2px" borderColor="whiteAlpha.300" borderRadius="lg" overflow="hidden">
+                            <Image src={item.img} alt="instagram post" />
+                        </GridItem>
                     </Link>
                 ))}
-            </VStack>
-
+            </SimpleGrid>
+            </Section>
         </Container>
+
     )
 }
 
@@ -71,6 +83,7 @@ export default Social
 
 export const getServerSideProps = async () => {
     const prisma = new PrismaClient();
+    const instagramItem = await prisma.instagramItem.findMany();
     const socialItem = await prisma.socialItem.findMany();
-    return { props: { socialItem } };
+    return { props: { socialItem, instagramItem } };
 };

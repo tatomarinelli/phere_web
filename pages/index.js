@@ -1,16 +1,16 @@
 import { Container, Box, Heading, Image } from '@chakra-ui/react'
+import Section from '../components/section'
 const Page = () => {
     return (
-
         <Container>
-
+            <Section delay={0.3}>
             <Box display={{ md: 'flex' }} p={5}>
                 <Box flexGrow={1}>
                     <Heading as="h2" variant="page-title">
                         phere
                     </Heading>
                     <p>Producers and Live Performers based in Argentina</p>
-            
+
                 </Box>
 
                 <Box flexShrink={0} mt={{ base: 4, md: 0 }} ml={{ md: 6 }} align="center">
@@ -26,8 +26,8 @@ const Page = () => {
                         src="/images/profile.jpg"
                         alt="Profile Pic" />
                 </Box>
-
             </Box>
+            </Section>
         </Container>
     )
 }

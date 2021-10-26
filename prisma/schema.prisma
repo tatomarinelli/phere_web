@@ -10,6 +10,13 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model InstagramItem {
+
+  id        Int            @default(autoincrement()) @id
+  url       String?
+  img       String?
+}
+
 model SocialItem {
 
   id        Int            @default(autoincrement()) @id
