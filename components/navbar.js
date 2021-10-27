@@ -15,8 +15,7 @@ import {
     useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import ThemeToogleButton from './theme-toogle-button'
-
+//import ThemeToogleButton from './theme-toogle-button'
 
 
 const LinkItem = ({ href, path, children }) => {
@@ -27,7 +26,8 @@ const LinkItem = ({ href, path, children }) => {
             <Link
                 p={2}
                 bg={active ? 'grassTeal' : undefined}
-                color={active ? '#202023' : inactiveColor}
+                color={active ? '#FAFAFA' : inactiveColor}
+                rounded="lg"                
             >
                 {children}
             </Link>
@@ -70,7 +70,11 @@ const Navbar = props => {
                     flexGrow={1}
                     mt={{ base: 4, md: 0 }}
                 >
-                    <LinkItem href="/contact" path={path}>
+                    <LinkItem href="/" path={path}>
+                        Home
+                    </LinkItem>
+                    {/*
+                     <LinkItem href="/contact" path={path}>
                         Contact
                     </LinkItem>
                     <LinkItem href="/about-us" path={path}>
@@ -79,13 +83,14 @@ const Navbar = props => {
                     <LinkItem href="/music" path={path}>
                         Music
                     </LinkItem>
+                    */}
                     <LinkItem href="/social" path={path}>
                         Social Media
                     </LinkItem>
                 </Stack>
 
                 <Box flex={1} align="right">
-                    <ThemeToogleButton />
+                    {/*<ThemeToogleButton />*/}
 
                     <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
                         <Menu>

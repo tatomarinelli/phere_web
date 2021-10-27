@@ -1,6 +1,9 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+// Si se modifica el schema eliminar package-lock.json -> npx prisma generate -> npm install -> Deployar
+// Quizas solo eliminando y deployando funciona pero vite como e
+
 generator client {
   provider = "prisma-client-js"
 }
