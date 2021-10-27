@@ -9,7 +9,7 @@ import {
     GridItem,
     Box
 } from '@chakra-ui/react'
-import { PrismaClient } from '@prisma/client';
+//import { PrismaClient } from '@prisma/client';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import Section from '../components/section'
 
