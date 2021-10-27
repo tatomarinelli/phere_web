@@ -1,6 +1,7 @@
 import Logo from './logo'
 import NextLink from 'next/link'
 import {
+    MenuDivider,
     Container,
     Box,
     Link,
@@ -27,7 +28,7 @@ const LinkItem = ({ href, path, children }) => {
                 p={2}
                 bg={active ? 'grassTeal' : undefined}
                 color={active ? '#FAFAFA' : inactiveColor}
-                rounded="lg"                
+                rounded="lg"
             >
                 {children}
             </Link>
@@ -100,9 +101,14 @@ const Navbar = props => {
                                 variant="outline"
                                 aria-label="Options"
                             />
-                            <MenuList>
+                            <MenuList bg='#4B515D' alignContent maxH="-webkit-fit-content">
+                                <NextLink href="/" passHref>
+                                    <MenuItem as={Link}>Home</MenuItem>
+                                </NextLink>
+                                <MenuDivider/>
+                                {/*
                                 <NextLink href="/contact" passHref>
-                                    <MenuItem as={Link}>Contact</MenuItem>
+                                <MenuItem as={Link}>Contact</MenuItem>
                                 </NextLink>
                                 <NextLink href="/about-us" passHref>
                                     <MenuItem as={Link}>About Us</MenuItem>
@@ -110,6 +116,7 @@ const Navbar = props => {
                                 <NextLink href="/music" passHref>
                                     <MenuItem as={Link}>Music</MenuItem>
                                 </NextLink>
+                                */}
                                 <NextLink href="/social" passHref>
                                     <MenuItem as={Link}>Social Media</MenuItem>
                                 </NextLink>
@@ -118,8 +125,8 @@ const Navbar = props => {
                     </Box>
                 </Box>
 
-            </Container>
-        </Box>
+            </Container >
+        </Box >
     )
 }
 
