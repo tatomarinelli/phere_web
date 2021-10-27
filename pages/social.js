@@ -20,7 +20,7 @@ const Social = ({ _socialItem, _instagramItem }) => {
     var socialItem =
         [
             { name: "Spotify", url: "https://open.spotify.com/artist/7uXCDw5tJqpxQmqTK4pB1S?si=5I8E58TCTW24ci0F1LbHDw", img: "https://i.imgur.com/0TlOpTk.png" },
-            { name: "Youtube", url: "UC9IvWSGBmu7xG1KpnHgaY3g", img: "https://i.imgur.com/jQEL3cu.png" },
+            { name: "Youtube", url: "https://www.youtube.com/channel/UC9IvWSGBmu7xG1KpnHgaY3g", img: "https://i.imgur.com/jQEL3cu.png" },
             { name: "Instagram", url: "https://www.instagram.com/phere_/", img: "https://i.imgur.com/bCoBx63.png" }
         ]
 
