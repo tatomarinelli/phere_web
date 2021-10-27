@@ -100,6 +100,7 @@ const Social = ({ socialItem, instagramItem }) => {
 export default Social
 
 
+/*
 export async function getServerSideProps() {
     try {
         const prisma = new PrismaClient();
@@ -114,4 +115,4 @@ export async function getServerSideProps() {
 
         return { props: { test, test } };
     }
-}
+}*/
