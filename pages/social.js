@@ -9,34 +9,36 @@ import {
     GridItem,
     Box
 } from '@chakra-ui/react'
-import { PrismaClient } from '@prisma/client';
+//import { PrismaClient } from '@prisma/client';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import Section from '../components/section'
 
 
-const Social = ({ socialItem, instagramItem }) => {
+const Social = ({ _socialItem, _instagramItem }) => {
 
     /* STATIC */
-    var _socialItem =
+    var socialItem =
         [
             { name: "Spotify", url: "https://open.spotify.com/artist/7uXCDw5tJqpxQmqTK4pB1S?si=5I8E58TCTW24ci0F1LbHDw", img: "https://i.imgur.com/0TlOpTk.png" },
-            { name: "Youtube", url: "UC9IvWSGBmu7xG1KpnHgaY3g", img: "https://i.imgur.com/jQEL3cu.png" },
+            { name: "Youtube", url: "https://www.youtube.com/channel/UC9IvWSGBmu7xG1KpnHgaY3g", img: "https://i.imgur.com/jQEL3cu.png" },
             { name: "Instagram", url: "https://www.instagram.com/phere_/", img: "https://i.imgur.com/bCoBx63.png" }
         ]
 
 
-    var _instagramItem =
+    var instagramItem =
         [
             { url: "https://open.spotify.com/track/7AXE4epsgD37BJI3LCrxFV?si=85374f339e374825&nd=1", img: "https://i.imgur.com/93DQGCt_d.webp?maxwidth=760&fidelity=grand" },
             { url: "https://www.youtube.com/channel/UC9IvWSGBmu7xG1KpnHgaY3g", img: "https://i.imgur.com/RHYtjhV.jpg" }
         ]
 
+    /*
     if (socialItem == null) {
         socialItem = _socialItem;
     }
     if (instagramItem == null) {
         instagramItem = _instagramItem;
     }
+    */
     /*=================================================*/
 
     return (
@@ -100,6 +102,7 @@ const Social = ({ socialItem, instagramItem }) => {
 export default Social
 
 
+/*
 export async function getServerSideProps() {
     try {
         const prisma = new PrismaClient();
@@ -114,4 +117,4 @@ export async function getServerSideProps() {
 
         return { props: { test, test } };
     }
-}
+}*/
