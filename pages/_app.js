@@ -5,7 +5,7 @@ import theme from '../lib/theme'
 import { tsParticles } from 'tsparticles'
 
 const Website = ({ Component, pageProps, router }) => {
-  
+  /*
   tsParticles.load("tsparticles2", {
     "fullScreen": {
         "enable": true,
@@ -124,7 +124,7 @@ const Website = ({ Component, pageProps, router }) => {
         },
         "retina_detect": true
       
-  });
+  });*/
 
   tsParticles.load("tsparticles", {
     "fullScreen": {
@@ -241,6 +241,7 @@ const Website = ({ Component, pageProps, router }) => {
         "retina_detect": true
       
   });
+  /*
   tsParticles.load("tsparticles1", {
     "fullScreen": {
         "enable": true,
@@ -360,7 +361,7 @@ const Website = ({ Component, pageProps, router }) => {
         "retina_detect": true
       
   });
-
+*/
 
   return (
     <ChakraProvider theme={theme}>
