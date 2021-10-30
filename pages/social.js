@@ -21,7 +21,8 @@ const Social = ({ _socialItem, _instagramItem }) => {
         [
             { name: "Spotify", url: "https://open.spotify.com/artist/7uXCDw5tJqpxQmqTK4pB1S?si=5I8E58TCTW24ci0F1LbHDw", img: "https://i.imgur.com/0TlOpTk.png" },
             { name: "Youtube", url: "https://www.youtube.com/channel/UC9IvWSGBmu7xG1KpnHgaY3g", img: "https://i.imgur.com/jQEL3cu.png" },
-            { name: "Instagram", url: "https://www.instagram.com/phere_/", img: "https://i.imgur.com/bCoBx63.png" }
+            { name: "Instagram", url: "https://www.instagram.com/phere_/", img: "https://i.imgur.com/bCoBx63.png" },
+            { name: "SoundCloud", url: "https://soundcloud.com/phere_ar", img: "https://i.imgur.com/n79HQ3e.png" }
         ]
 
 
