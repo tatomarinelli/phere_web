@@ -28,6 +28,8 @@ const Social = ({ _socialItem, _instagramItem }) => {
 
     var instagramItem =
         [
+           
+            { url: "https://open.spotify.com/track/2uRduSbWskSvUNnCgqBM0C?si=77a902b3c1f94844", img: " https://i.imgur.com/mAKQulr.png" },
             { url: "https://open.spotify.com/track/7AXE4epsgD37BJI3LCrxFV?si=85374f339e374825&nd=1", img: "https://i.imgur.com/93DQGCt_d.webp?maxwidth=760&fidelity=grand" },
             { url: "https://www.youtube.com/channel/UC9IvWSGBmu7xG1KpnHgaY3g", img: "https://i.imgur.com/RHYtjhV.jpg" }
         ]
