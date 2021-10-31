@@ -9,7 +9,7 @@ const Page = () => {
                     <Heading as="h2" variant="page-title">
                         phere
                     </Heading>
-                    <p>Producers and Live Performers based in Argentina</p>
+                    <p>Producers and Live Performers from Argentina</p>
 
                 </Box>
 
